@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 var App = React.createClass({
 
   render() {
-    return <h1>Hello, world!</h1>;
+    return <h1>Hello, World</h1>;
   },
 
 });
