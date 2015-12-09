@@ -20,8 +20,8 @@ module.exports = {
     // be used by any lazy-loading in your Webpack scripts to load more chunks
     // from the server. Basically, `path` sets where in your project's file structure
     // your bundle will be written, while `publicPath` tells your Webpack modules
-    // where your bundle can be requested from the server. You probably won't need
-    // `publicPath` unless you're doing something fancy with Webpack's code splitting.
+    // where your bundle can be requested from the server. In this repo, `publicPath`
+    // tells the webpack-dev-server that it's ok to serve the files in the dist folder.
     publicPath: 'dist',
 
     // `filename` tells Webpack what to call the file/files it outputs.
