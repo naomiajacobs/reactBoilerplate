@@ -4,7 +4,7 @@ A barebones repo to get you started with Webpack, Babel, and React.
 
 ## Installation
 
-`git clone https://github.com/naomiajacobs/reactBoilerplate.com`
+`git clone https://github.com/naomiajacobs/reactBoilerplate`
 
 then
 
