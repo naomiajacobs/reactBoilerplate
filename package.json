@@ -1,33 +1,48 @@
 {
-  "name": "reactboilerplate",
+  "name": "ReactBoilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate repo for React/Webpack/Babel apps",
+  "description": "Boilerplate repo for React/Webpack/Babel app",
   "main": "./client/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "start": "webpack-dev-server --inline --hot --content-base client/"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/naomiajacobs/reactBoilerplate.git"
+    "type": "git"
   },
-  "author": "Naomi Jacobs",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/naomiajacobs/reactBoilerplate/issues"
   },
-  "homepage": "https://github.com/naomiajacobs/reactBoilerplate#readme",
   "dependencies": {
+    "autoprefixer": "^6.3.6",
     "babel": "^6.1.18",
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "webpack": "^1.12.9"
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jasmine-core": "^2.4.1",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.9.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "redux": "^3.4.0",
+    "webpack": "^1.12.14"
   },
   "devDependencies": {
-    "webpack-dev-server": "^1.14.0"
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.26",
+    "karma-webpack": "^1.7.0",
+    "react-addons-test-utils": "^15.0.0"
   }
 }
