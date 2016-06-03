@@ -7,14 +7,14 @@ module.exports = {
   // the top-level file that then `requires` some other files, which then
   // `require` some other files, etc. Webpack pulls these all into a modularized
   // bundle.
-  entry: './client/app.jsx',
+  entry: './client/index.jsx',
 
   // `output` is an object with options for the bundle that Webpack creates
   // out of your source files.
   output: {
 
     // `path` is a path to the directory where your bundle will be written.
-    path: 'dist',
+    path: 'client/dist',
 
     // `publicPath` is optional. It allows you to set a separate path that will
     // be used by any lazy-loading in your Webpack scripts to load more chunks
@@ -22,7 +22,7 @@ module.exports = {
     // your bundle will be written, while `publicPath` tells your Webpack modules
     // where your bundle can be requested from the server. In this repo, `publicPath`
     // tells the webpack-dev-server that it's ok to serve the files in the dist folder.
-    publicPath: 'dist',
+    publicPath: 'client/dist',
 
     // `filename` tells Webpack what to call the file/files it outputs.
     filename: 'bundle.js',
@@ -55,7 +55,7 @@ module.exports = {
         // this object requires 'babel-loader' to do the transformation.
         // We could actually apply multiple loaders here by using the property `loaders`
         // instead of `loader`, which takes an array of loader names.
-        // 
+        //
         // When you're declaring loaders in this field, you can leave off the `-loader` part
         // of the package name. Webpack will interpret `babel` as `babel-loader` here,
         // `coffee` as `coffee-loader`, etc. But you can also just write out `babel-loader`,
@@ -69,9 +69,15 @@ module.exports = {
         // loader: 'babel?presets[]=react,presets[]=es2015'
         query: {
           presets: ['react', 'es2015'],
-        }
+        },
       },
-    ]
-  }
+
+      {
+        test: /\.jsx?$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
 
 };
